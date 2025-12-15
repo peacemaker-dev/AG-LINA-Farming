@@ -1,0 +1,15 @@
+Pages
+1. Home (header, hero, products, about, why choose us, who we supply, testimonials, footer)
+2. About (Journey, Vision, Mission, Legal entity, why choose us , who we supply, what we offer, Founder)
+3. Products (Gallery, Descriptions, Packages, Discounts)
+4. Contacts (Bussiness details, contact form, social media links)
+email, contact no, WhatsApp, 
+5. FAQs
+
+
+Location
+Bussiness hours
+Bulk orders images
+FAQs and answers
+
+update copyrights
