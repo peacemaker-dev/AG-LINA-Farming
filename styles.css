@@ -14,7 +14,7 @@
 
 body {
     background: linear-gradient(135deg, var(--primary-dark), var(--primary-soft));
-    color: #222;
+    color: #fff;
     overflow-x: hidden;
     line-height: 1.6;
     scroll-behavior: smooth;
@@ -190,7 +190,7 @@ body {
     top: 72px;                
     left: 0;
     right: 0;
-    background: linear-gradient(0deg, rgba(0,70,0,0.99), rgba(10,60,10,0.98));
+    background: var(--primary-dark);
     padding: 16px 24px 24px;
     box-shadow: 0 6px 18px rgba(0,0,0,0.12);
     transform: translateY(-120%);
@@ -1452,6 +1452,7 @@ footer {
 }
 
 .about-page-section,
+.about-credibility,
 .about-page-description,
 .what-we-do-section,
 .about-founder {
@@ -1669,6 +1670,7 @@ footer {
 
 /* Animation for reveal effect */
 .about-page-section,
+.about-credibility,
 .about-page-description,
 .what-we-do-section,
 .about-founder,
@@ -1682,6 +1684,7 @@ footer {
 .about-page-section.show,
 .about-page-description.show,
 .what-we-do-section.show,
+.about-credibility.show,
 .about-founder.show,
 .about-box.show,
 .about-values li.show {
@@ -1692,16 +1695,23 @@ footer {
 /* Responsive Design */
 @media (max-width: 768px) {
     .about-page-section,
+    .about-credibility,
     .about-page-description,
     .what-we-do-section,
     .about-founder {
-        padding: 1.8rem;
+        padding: 1rem;
         margin: 1.5rem auto;
-        width: 95%;
+        width: 85%;
     }
 
     .about-page h2 {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
+    }
+    .about-page p {
+        font-size: 1rem;
+    }
+    .about-page h2 {
+        font-size: 1.5rem;
     }
 
     .about-split .about-page-container {
@@ -1751,6 +1761,7 @@ footer {
 @media (prefers-reduced-motion: reduce) {
     .about-page-section,
     .about-page-description,
+    .about-page-description,
     .what-we-do-section,
     .about-founder,
     .about-box,
@@ -1759,5 +1770,141 @@ footer {
         transition: none;
         opacity: 1;
         transform: none;
+    }
+}
+
+/* ===================== PRODUCTS PAGE ===================== */
+.products-page {
+    background: #0d1117;
+    color: #e5e7eb;
+}
+
+.products-hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    max-width: 800px;
+    margin: auto;
+}
+
+.products-hero h1 {
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+}
+
+.product-showcase-item {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 2.5rem;
+    padding: 3.5rem 2rem;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.product-showcase-item.reverse {
+    grid-template-columns: 1.2fr 1fr;
+}
+
+.product-media img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 14px;
+}
+
+.product-text h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.product-features {
+    margin: 1.5rem 0;
+    padding-left: 1.2rem;
+}
+
+.product-features li {
+    margin-bottom: 0.6rem;
+}
+
+.product-for {
+    font-style: italic;
+    color: #9ca3af;
+}
+
+/* COMPARISON */
+.product-comparison {
+    padding: 4rem 2rem;
+    background: #071018;
+}
+
+.comparison-table {
+    max-width: 900px;
+    margin: auto;
+    background: #1c1f26;
+}
+
+.table-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 1rem;
+    border-bottom: 1px solid #2a2f3a;
+}
+
+.table-row.header {
+    background: #121826;
+    font-weight: 600;
+}
+
+/* ORDERING */
+.product-ordering {
+    max-width: 800px;
+    margin: auto;
+    padding: 4rem 2rem;
+}
+
+.product-ordering ol li {
+    margin-bottom: 0.8rem;
+}
+
+/* SEO */
+.seo-content {
+    max-width: 900px;
+    margin: auto;
+    padding: 3rem 2rem;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #cbd5e1;
+}
+
+/* CTA */
+.product-cta {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: #071018;
+}
+
+/* WHATSAPP */
+.whatsapp-float {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    background: #1f7a4d;
+    color: #fff;
+    padding: 0.9rem 1.4rem;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    z-index: 1000;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .product-showcase-item,
+    .product-showcase-item.reverse {
+        grid-template-columns: 1fr;
+    }
+
+    .product-media img {
+        height: 260px;
     }
 }
