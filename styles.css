@@ -180,7 +180,6 @@ body {
   pointer-events: none;   
 }
 
-/* Mobile layout */
 @media (max-width: 920px) {
   .nav-toggle {
     display: inline-flex;      
@@ -480,7 +479,6 @@ body {
 /* PRODUCTS SECTION */
 .products-section {
     padding: 4rem 5%;
-    /*background: #ffffff;*/
     text-align: center;
 }
 
@@ -573,6 +571,16 @@ body {
     transform: scale(1);
 }
 
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    .products-section {
+        padding: 2rem 1rem;
+    }
+}
+
 @media (max-width: 480px) {
     .section-title {
         font-size: 1.9rem;
@@ -656,34 +664,57 @@ body {
 .about-image img {
     width: 100%;
     border-radius: 12px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+   /* box-shadow: 0 10px 20px rgba(0,0,0,0.1);*/
 }
 
 /* Responsive */
-@media (max-width: 900px) {
+@media (max-width: 768px) {
+    .about-section {
+        background: #f5f9f5;
+        padding: 30px 0;
+    }
     .about-container {
         flex-direction: column;
         text-align: center;
+        gap: 10px;
     }
-
-    .about-text, .about-image {
+    .about-image {
+        width: 65%;
+    }
+    .about-text {
         width: 80%;
     }
-
+    .about-text p {
+        font-size: 1rem;
+    }
+    .about-text h2 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
     .about-highlights {
         align-items: center;
     }
 }
 
 @media (max-width: 480px) {
+    .about-section {
+        background: #f5f9f5;
+        padding: 20px 0;
+    }
   .about-text h2 {
-    font-size: 1.9rem;
-  }
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+    }
+  .about-text p {
+        font-size: 1rem;
+    }
+  .about-image {
+        width: 70%;
+    }
 }
 
 /* WHY CHOOSE US SECTION */
 .why-choose-us {
-    /*background: #f5f9f5;*/
     padding: 80px 0;
 }
 
@@ -742,18 +773,30 @@ body {
 }
 
 /* Mobile Responsive */
-@media (max-width: 900px) {
+@media (max-width: 768px) {
     .why-grid {
         grid-template-columns: 1fr 1fr;
     }
+    .why-choose-us {
+        padding: 50px 0;
+    }
+    .why-container h2 {
+        font-size: 2rem;
+    }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 480px) {
+    .why-choose-us {
+    padding: 40px 0;
+}
     .why-grid {
         grid-template-columns: 1fr;
     }
     .why-container h2 {
-        font-size: 1.9rem;
+        font-size: 1.8rem;
+    }
+    .why-subtext {
+        font-size: 1rem;
     }
 }
 
@@ -817,18 +860,31 @@ body {
 }
 
 /* Mobile Responsive */
-@media (max-width: 900px) {
+@media (max-width: 760px) {
     .supply-grid {
         grid-template-columns: 1fr 1fr;
     }
+    .who-we-supply {
+        padding: 40px 0;
+    }
+    .supply-container h2 {
+    font-size: 2rem;
+}
 }
 
-@media (max-width: 600px) {
+@media (max-width: 480px) {
     .supply-grid {
         grid-template-columns: 1fr;
     }
     .supply-container h2 {
-        font-size: 1.9rem;
+        font-size: 1.8rem;
+    }
+    .supply-subtext {
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+    .who-we-supply {
+        padding: 40px 0;
     }
 }
 
@@ -2117,6 +2173,29 @@ footer {
     font-size: 1rem;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
+/* ORDERING NOTICE */
+.ordering-notice {
+    margin-top: 1.5rem;
+    padding: 1rem 1.2rem;
+    background: rgba(255, 255, 255, 0.15);
+    border-left: 4px solid var(--accent);
+    border-radius: 12px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+.ordering-notice strong {
+    color: white;
+}
+
+.ordering-notice p {
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.95);
+}
 
 /* SEO CONTENT */
 .seo-content {
@@ -2124,36 +2203,64 @@ footer {
 }
 
 /* WHATSAPP FLOAT BUTTON */
-.whatsapp-float {
+.whatsapp-wrapper {
     position: fixed;
     bottom: 30px;
-    right: 30px;
-    background: #25D366;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-end;
+    gap: 10px;
+    z-index: 1000;
+}
+
+/* CTA SMALL TEXT */
+.whatsapp-cta-text {
+    background: rgba(0, 0, 0, 0.75);
     color: white;
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    border-radius: 12px;
+    white-space: nowrap;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* WHATSAPP FLOAT BUTTON */
+.whatsapp-float {
+    background: #25D366;
     width: 70px;
     height: 70px;
+    margin-right: 1rem;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.6rem;
-    font-weight: 600;
     text-decoration: none;
     box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
-    z-index: 1000;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     animation: float 3s ease-in-out infinite;
 }
 
+/* ICON */
+.whatsapp-float img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    display: block;
+}
+
+/* HOVER */
 .whatsapp-float:hover {
-    transform: scale(1.1) rotate(5deg);
+    transform: scale(1.1);
     box-shadow: 0 15px 35px rgba(37, 211, 102, 0.4);
 }
 
+/* FLOAT ANIMATION */
 @keyframes float {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-10px); }
 }
+
 
 /* ANIMATIONS */
 .product-showcase-item,
