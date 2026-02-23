@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -69,18 +70,17 @@
         </div>
     </header>
     <!-- ABOUT INTRO -->
-    <section class="about-intro">
-        <div class="about-page-container">
-            <h1>About Us</h1>
-            <img src="images/icons/tiny-logo.png" alt="AG Lina Farming Logo" width="250">
-        </div>
-    </section>
+
 
     <main class="about-page" role="main">
+        <section class="about-intro">
+            <h1 class="about-intro-title">About Us</h1>
+            <img src="images/icons/tiny-logo.png" class="about-intro-logo" alt="AG Lina Farming Logo" width="250">
+        </section>
 
         <!-- ABOUT DESCRIPTION -->
-        <section class="about-page-description">
-            <h2>Who We Are</h2>
+        <section class="about-description">
+            <h2 class="about-description-title">Who We Are</h2>
             <p>
                 AG Lina Farming Pty Ltd is a broiler chicken farming business based in Mandeni,
                 Isithebe (Mambane area), KwaZulu-Natal. Established in 2017 and operating since
@@ -97,7 +97,7 @@
                 practices and consistent quality standards.
             </p>
 
-            <ul class="about-list">
+            <ul class="what-we-do-list">
                 <li>Live broiler chickens</li>
                 <li>Freshly slaughtered chickens</li>
                 <li>Supply for households and bulk buyers</li>
@@ -110,9 +110,9 @@
         </section>
 
         <!-- WHY CHOOSE US -->
-        <section class="about-page-section">
+        <section class="why-choose">
             <h2>Why Choose AG Lina Farming</h2>
-            <ul class="about-list">
+            <ul class="why-choose-list">
                 <li>Operating consistently since 2018</li>
                 <li>Fresh supply prepared per order</li>
                 <li>Reliable service for small and bulk buyers</li>
@@ -122,10 +122,10 @@
         </section>
 
         <!-- HOW WE WORK -->
-        <section class="about-page-section">
+        <section class="how-we-work">
             <h2>How We Work</h2>
 
-            <ol class="about-steps">
+            <ol class="how-we-work-steps">
                 <li>Place your order via phone or WhatsApp</li>
                 <li>Confirm quantity and preferred date</li>
                 <li>We prepare fresh stock</li>
@@ -139,10 +139,10 @@
         </section>
 
         <!-- VISION & MISSION -->
-        <section class="about-page-section about-split">
-            <div class="about-page-container">
+        <section class="vision-mission">
+            <div class="vision-mission-grid">
 
-                <div class="about-box">
+                <div class="vision-mission-card">
                     <h2>Our Vision</h2>
                     <p>
                         To become a leading provider of high-quality, affordable, and sustainably
@@ -150,7 +150,7 @@
                     </p>
                 </div>
 
-                <div class="about-box">
+                <div class="vision-mission-card">
                     <h2>Our Mission</h2>
                     <p>
                         To produce fresh and healthy broiler chickens using responsible farming
@@ -162,9 +162,9 @@
         </section>
 
         <!-- VALUES -->
-        <section class="about-page-section">
+        <section class="values">
             <h2>Our Values</h2>
-            <ul class="about-values">
+            <ul class="values-list">
                 <li>Quality</li>
                 <li>Healthy Produce</li>
                 <li>Customer Focus</li>
@@ -173,16 +173,16 @@
         </section>
 
         <!-- FOUNDER -->
-        <section class="about-founder">
-            <div class="about-page-container about-founder-layout">
+        <section class="founder">
+            <div class="founder-grid">
 
-                <div class="founder-image">
-                    <img src="images/founder.jpg" alt="Khumbuzile Sithole - Founder of AG Lina Farming">
+                <div class="founder-image-wrap">
+                    <img src="images/founder.jpg" class="founder-image" alt="Khumbuzile Sithole - Founder of AG Lina Farming">
                 </div>
 
                 <div class="founder-info">
-                    <h2>Founder & Director</h2>
-                    <h3>Khumbuzile Sithole</h3>
+                    <h2 class="founder-title">Founder & Director</h2>
+                    <h3 class="founder-name">Khumbuzile Sithole</h3>
 
                     <p>
                         Khumbuzile Sithole is the founder and director of AG Lina Farming Pty Ltd.
@@ -201,7 +201,6 @@
         </section>
 
     </main>
-
 
     <footer>
         <div class="footer-container">
@@ -258,22 +257,23 @@
 </body>
 <script src="interactions.js"></script><!-- Link to the hero animation script -->
 <script>
-// Add to your existing JavaScript file
-function revealOnScroll() {
-    const elements = document.querySelectorAll('.about-page-section, .about-page-description, .what-we-do-section, .about-founder, .about-box, .about-values li');
-    
-    elements.forEach(element => {
-        const elementTop = element.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
-        
-        if (elementTop < windowHeight - 100) {
-            element.classList.add('show');
-        }
-    });
-}
+    // Add to your existing JavaScript file
+    function revealOnScroll() {
+        const elements = document.querySelectorAll('.about-page-section, .about-page-description, .what-we-do-section, .about-founder, .about-box, .about-values li');
 
-// Initialize on load and scroll
-window.addEventListener('load', revealOnScroll);
-window.addEventListener('scroll', revealOnScroll);
+        elements.forEach(element => {
+            const elementTop = element.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+
+            if (elementTop < windowHeight - 100) {
+                element.classList.add('show');
+            }
+        });
+    }
+
+    // Initialize on load and scroll
+    window.addEventListener('load', revealOnScroll);
+    window.addEventListener('scroll', revealOnScroll);
 </script>
+
 </html>
